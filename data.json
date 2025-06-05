@@ -1,0 +1,108 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Summer Music Festival",
+      "date": "2024-07-15",
+      "time": "14:00",
+      "location": "Central Park",
+      "category": "Music",
+      "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800",
+      "description": "Join us for a day of amazing live music featuring top artists from around the world. Food vendors and activities available.",
+      "price": 49.99,
+      "capacity": 5000,
+      "registered": 3200
+    },
+    {
+      "id": 2,
+      "title": "Tech Conference 2024",
+      "date": "2024-06-20",
+      "time": "09:00",
+      "location": "Convention Center",
+      "category": "Technology",
+      "image": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800",
+      "description": "Annual technology conference featuring keynote speakers, workshops, and networking opportunities.",
+      "price": 299.99,
+      "capacity": 1000,
+      "registered": 750
+    },
+    {
+      "id": 3,
+      "title": "Food & Wine Festival",
+      "date": "2024-08-05",
+      "time": "12:00",
+      "location": "Downtown Square",
+      "category": "Food",
+      "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800",
+      "description": "Sample cuisine from top chefs and wineries. Cooking demonstrations and live entertainment included.",
+      "price": 35.00,
+      "capacity": 2000,
+      "registered": 1800
+    },
+    {
+      "id": 4,
+      "title": "Marathon 2024",
+      "date": "2024-09-10",
+      "time": "07:00",
+      "location": "City Center",
+      "category": "Sports",
+      "image": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800",
+      "description": "Annual city marathon with multiple race categories. Professional timing and medical support provided.",
+      "price": 45.00,
+      "capacity": 10000,
+      "registered": 8500
+    },
+    {
+      "id": 5,
+      "title": "Art Exhibition",
+      "date": "2024-07-01",
+      "time": "10:00",
+      "location": "Modern Art Museum",
+      "category": "Art",
+      "image": "https://images.unsplash.com/photo-1536924940846-227afc31b2f5?w=800",
+      "description": "Contemporary art exhibition featuring works from emerging and established artists.",
+      "price": 15.00,
+      "capacity": 500,
+      "registered": 300
+    },
+    {
+      "id": 6,
+      "title": "Business Networking",
+      "date": "2024-06-15",
+      "time": "18:00",
+      "location": "Grand Hotel",
+      "category": "Business",
+      "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800",
+      "description": "Networking event for professionals. Includes dinner and keynote speech.",
+      "price": 75.00,
+      "capacity": 200,
+      "registered": 150
+    },
+    {
+      "id": 7,
+      "title": "Comedy Night",
+      "date": "2024-07-20",
+      "time": "20:00",
+      "location": "Laugh Factory",
+      "category": "Entertainment",
+      "image": "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800",
+      "description": "Stand-up comedy night featuring top comedians from the local scene.",
+      "price": 25.00,
+      "capacity": 300,
+      "registered": 250
+    },
+    {
+      "id": 8,
+      "title": "Fitness Workshop",
+      "date": "2024-08-12",
+      "time": "09:00",
+      "location": "Fitness Center",
+      "category": "Sports",
+      "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800",
+      "description": "Workshop covering various fitness techniques and nutrition advice.",
+      "price": 40.00,
+      "capacity": 100,
+      "registered": 80
+    }
+  ]
+} 
