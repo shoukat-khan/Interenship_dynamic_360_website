@@ -247,4 +247,95 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize event manager
     new EventManager();
-}); 
+});
+
+// Mobile Menu Functionality
+const mobileMenuBtn = document.querySelector('.mobile-menu');
+const mobileNav = document.createElement('div');
+mobileNav.className = 'mobile-nav';
+
+// Create mobile navigation content
+const navLinks = document.querySelector('.nav-links').cloneNode(true);
+const closeBtn = document.createElement('div');
+closeBtn.className = 'close-mobile-nav';
+closeBtn.innerHTML = '<i class="fas fa-times"></i>';
+
+mobileNav.appendChild(closeBtn);
+mobileNav.appendChild(navLinks);
+document.body.appendChild(mobileNav);
+
+// Toggle mobile menu
+mobileMenuBtn.addEventListener('click', () => {
+    mobileNav.classList.add('active');
+    document.body.style.overflow = 'hidden';
+});
+
+closeBtn.addEventListener('click', () => {
+    mobileNav.classList.remove('active');
+    document.body.style.overflow = '';
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (mobileNav.classList.contains('active') && 
+        !mobileNav.contains(e.target) && 
+        !mobileMenuBtn.contains(e.target)) {
+        mobileNav.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
+
+// Close mobile menu when clicking a link
+mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+});
+
+// Date Filter Functionality
+const startDateInput = document.getElementById('startDate');
+const endDateInput = document.getElementById('endDate');
+
+// Set minimum date to today
+const today = new Date().toISOString().split('T')[0];
+startDateInput.min = today;
+endDateInput.min = today;
+
+// Update end date minimum when start date changes
+startDateInput.addEventListener('change', () => {
+    endDateInput.min = startDateInput.value;
+    if (endDateInput.value && endDateInput.value < startDateInput.value) {
+        endDateInput.value = startDateInput.value;
+    }
+});
+
+// Update start date maximum when end date changes
+endDateInput.addEventListener('change', () => {
+    startDateInput.max = endDateInput.value;
+    if (startDateInput.value && startDateInput.value > endDateInput.value) {
+        startDateInput.value = endDateInput.value;
+    }
+});
+
+// Add helper text for date selection
+function updateDateHelperText() {
+    const startDate = startDateInput.value;
+    const endDate = endDateInput.value;
+    
+    if (startDate && endDate) {
+        const start = new Date(startDate);
+        const end = new Date(endDate);
+        const diffTime = Math.abs(end - start);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        
+        const startDateHelper = startDateInput.parentElement.querySelector('small');
+        const endDateHelper = endDateInput.parentElement.querySelector('small');
+        
+        startDateHelper.textContent = `Events from ${start.toLocaleDateString()}`;
+        endDateHelper.textContent = `Events until ${end.toLocaleDateString()} (${diffDays} days)`;
+    }
+}
+
+startDateInput.addEventListener('change', updateDateHelperText);
+endDateInput.addEventListener('change', updateDateHelperText); 

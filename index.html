@@ -57,8 +57,16 @@
                 <option value="Entertainment">Entertainment</option>
             </select>
             <div class="date-filters">
-                <input type="date" id="startDate" placeholder="Start Date">
-                <input type="date" id="endDate" placeholder="End Date">
+                <div class="date-input-group">
+                    <label for="startDate">From Date</label>
+                    <input type="date" id="startDate" placeholder="Start Date">
+                    <small>Select the earliest date for events</small>
+                </div>
+                <div class="date-input-group">
+                    <label for="endDate">To Date</label>
+                    <input type="date" id="endDate" placeholder="End Date">
+                    <small>Select the latest date for events</small>
+                </div>
             </div>
         </div>
         <div class="events-grid" id="eventsGrid">
